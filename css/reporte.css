@@ -1,0 +1,125 @@
+/* Modern reporte style */
+body {
+    background: linear-gradient(135deg, #232b33 0%, #49525a 100%);
+}
+
+.breadcrumb {
+    font-size: 15px;
+    color: #90a4ae;
+    margin-bottom: 18px;
+    margin-top: 10px;
+    user-select: none;
+}
+.breadcrumb-link {
+    color: #29b6f6;
+    cursor: pointer;
+    text-decoration: none;
+}
+.breadcrumb-link:hover {
+    text-decoration: underline;
+}
+.breadcrumb-separator {
+    margin: 0 6px;
+}
+.breadcrumb-current {
+    color: #90a4ae;
+}
+
+.reporte-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 18px;
+    color: #fff;
+}
+
+.reporte-filtros {
+    background: #232b33;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(60,60,60,0.10);
+    padding: 32px 28px 24px 28px;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.reporte-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 32px;
+    align-items: flex-end;
+}
+
+.filtro-grupo {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 220px;
+    min-width: 180px;
+}
+
+.filtro-grupo label {
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 7px;
+}
+
+.filtro-grupo input[type="date"],
+.filtro-grupo input[type="text"] {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #374151;
+    color: #e3e3e3;
+    outline: none;
+    margin-bottom: 0;
+}
+
+.filtro-acciones {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.btn-generar {
+    padding: 12px 28px;
+    background: linear-gradient(90deg, #29b6f6 60%, #1976d2 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-generar:hover {
+    background: linear-gradient(90deg, #1976d2 60%, #29b6f6 100%);
+}
+
+.btn-limpiar {
+    padding: 12px 28px;
+    background: #374151;
+    color: #b0bec5;
+    border: 1px solid #49525a;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-limpiar:hover {
+    background: #49525a;
+    color: #fff;
+}
+
+@media (max-width: 700px) {
+    .reporte-filtros {
+        padding: 18px 8px 12px 8px;
+    }
+    .reporte-form {
+        flex-direction: column;
+        gap: 14px;
+    }
+    .filtro-grupo {
+        min-width: 0;
+    }
+}

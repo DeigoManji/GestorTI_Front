@@ -1,0 +1,152 @@
+.filters {
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    background: #374151;
+    border: none;
+    padding: 10px 15px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 6px;
+    color: #b0bec5;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #29b6f6;
+    color: #fff;
+}
+
+.dispositivos-searchbar {
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(60,60,60,0.10);
+    background: rgba(36, 41, 49, 0.92);
+    border-radius: 12px;
+}
+.dispositivos-searchbar input {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 10px;
+    border: none;
+    background: #232b33;
+    font-size: 16px;
+    color: #e3e3e3;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.devices-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: rgba(36, 41, 49, 0.92);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    margin-top: 18px;
+}
+
+.devices-table th, .devices-table td {
+    padding: 16px;
+    border-bottom: 1px solid #374151;
+    text-align: left;
+    font-size: 16px;
+    color: #e3e3e3;
+}
+
+.devices-table th {
+    background: #232b33;
+    color: #29b6f6;
+    font-weight: bold;
+    border-bottom: 2px solid #29b6f6;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.status.active {
+    background: #29b6f6;
+    color: #fff;
+}
+
+.status.inactive {
+    background: #b0bec5;
+    color: #232b33;
+}
+
+.connected-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.connected-icon.active {
+    background: #29b6f6;
+}
+
+.connected-icon.inactive {
+    background: #49525a;
+}
+
+.chat-btn,
+.logout-btn,
+.user-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px 12px;
+    font-size: 20px;
+    height: 48px;
+    width: 48px;
+    justify-content: center;
+    color: #fff;
+    transition: background 0.2s;
+    border-radius: 50%;
+}
+
+.chat-btn:hover,
+.logout-btn:hover,
+.user-btn:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+.chat-btn svg,
+.user-btn svg,
+.logout-btn svg {
+    width: 28px;
+    height: 28px;
+    color: #fff;
+    stroke-width: 1.5;
+}
+
+.logout-btn svg {
+    color: #e53935;
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        width: 70px;
+        padding-top: 60px;
+    }
+    .sidebar ul li,
+    .new-device {
+        font-size: 0;
+        padding: 12px 0;
+        margin-bottom: 8px;
+    }
+    .content {
+        margin-left: 80px;
+        width: calc(100vw - 80px);
+        padding: 20px 8px;
+    }
+}

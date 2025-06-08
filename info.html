@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información - TechCo</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/info.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">TechCo</div>
+        <button class="info-btn" title="Información" onclick="window.location.href='info.html'">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#ffffff"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+              <path d="M12 9h.01" />
+              <path d="M11 12h1v4h1" />
+            </svg>
+        </button>
+        <div style="display: flex; align-items: center; gap: 12px; margin-left: auto;">
+            <button class="chat-btn" onclick="window.location.href='chat.html'">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-width="1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path d="M8 9h8" />
+                    <path d="M8 13h6" />
+                    <path d="M9 18h-3a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-3l-3 3l-3 -3z" />
+                </svg>
+            </button>
+            <button class="user-btn" title="Usuario" onclick="window.location.href='usuario.html'">
+                <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 20V19C5 15.134 8.13401 12 12 12V12C15.866 12 19 15.134 19 19V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+            <button class="logout-btn" title="Cerrar sesión" onclick="window.location.href='login.html'">
+                <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 12H19M19 12L16 15M19 12L16 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M19 6V5C19 3.89543 18.1046 3 17 3H7C5.89543 3 5 3.89543 5 5V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+    <div class="sidebar">
+        <ul>
+            <li onclick="window.location.href='main.html'">Panel de Control</li>
+            <li onclick="window.location.href='dispositivos.html'">Dispositivos</li>
+            <li onclick="window.location.href='reporte.html'">Reporte</li>
+        </ul>
+        <button class="new-device" onclick="window.location.href='nuevodispositivo.html'">Nuevo Dispositivo</button>
+        <button class="register-maintenance" onclick="window.location.href='mantenimiento.html'">Registrar Mantenimiento</button>
+    </div>
+    <main class="content">
+        <div class="info-container">
+            <h1>Información y Manual de Usuario</h1>
+            <section style="margin-bottom: 36px;">
+                <h2>Manual de Usuario</h2>
+                <p>
+                    Bienvenido al sistema de gestión de dispositivos TechCo. Este manual le guiará en el uso de las principales funciones:
+                </p>
+                <ul>
+                    <li><b>Panel de Control:</b> Visualice el resumen y estado general de los dispositivos.</li>
+                    <li><b>Dispositivos:</b> Consulte, busque y filtre todos los dispositivos registrados.</li>
+                    <li><b>Registrar Nuevo Dispositivo:</b> Añada un nuevo dispositivo al sistema.</li>
+                    <li><b>Registrar Mantenimiento:</b> Registre las actividades de mantenimiento realizadas.</li>
+                    <li><b>Historial:</b> Revise los eventos y cambios realizados en los dispositivos.</li>
+                    <li><b>Reporte:</b> Genere reportes personalizados según filtros de fecha, usuario y dispositivo.</li>
+                    <li><b>Chat:</b> Consulte al asistente IA para soporte y ayuda técnica.</li>
+                    <li><b>Usuario:</b> Gestione su información personal y cambie su contraseña.</li>
+                </ul>
+            </section>
+            <section style="margin-bottom: 36px;">
+                <h2>Información del Sistema</h2>
+                <p>
+                    Sistema de Gestión de Dispositivos TechCo v1.0<br>
+                    Desarrollado para la administración eficiente de inventario, mantenimiento y control de dispositivos tecnológicos en la organización.<br>
+                    Compatible con navegadores modernos y dispositivos móviles.
+                </p>
+            </section>
+            <section>
+                <h2>Autores</h2>
+                <ul>
+                    <li>Diego Moran </li>
+                    <li>Angel Machado</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

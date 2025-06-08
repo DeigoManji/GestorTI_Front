@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+    <header>
+        <div class="logo">TechCo</div>
+    </header>
+
+    <div class="login-container">
+        <h2>REGISTRO</h2>
+        <form>
+            <label for="name">Nombre</label>
+            <input type="text" id="name" placeholder="Tu nombre" required>
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" placeholder="usuario@gmail.com" required>
+
+            <div class="password-wrapper">
+                <label for="password">Contraseña</label>
+                <div class="input-with-icon">
+                    <input type="password" id="password" placeholder="********" required>
+                    <span class="toggle-password" onclick="togglePasswordVisibility('password')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2"> <path d="M21 9c-2.4 2.667 -5.4 4 -9 4c-3.6 0 -6.6 -1.333 -9 -4"></path> <path d="M3 15l2.5 -3.8"></path> <path d="M21 14.976l-2.492 -3.776"></path> <path d="M9 17l.5 -4"></path> <path d="M15 17l-.5 -4"></path> </svg> 
+                    </span>
+                </div>
+            </div>
+
+            <div class="password-wrapper">
+                <label for="confirm-password">Confirmar Contraseña</label>
+                <div class="input-with-icon">
+                    <input type="password" id="confirm-password" placeholder="********" required>
+                    <span class="toggle-password" onclick="togglePasswordVisibility('confirm-password')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2"> <path d="M21 9c-2.4 2.667 -5.4 4 -9 4c-3.6 0 -6.6 -1.333 -9 -4"></path> <path d="M3 15l2.5 -3.8"></path> <path d="M21 14.976l-2.492 -3.776"></path> <path d="M9 17l.5 -4"></path> <path d="M15 17l-.5 -4"></path> 
+                        </svg> 
+                    </span>
+                </div>
+            </div>
+
+            <button type="submit">Registrarse</button>
+            <a href="login.html" class="register-button">¿Ya tienes cuenta? Inicia sesión</a>
+        </form>
+    </div>
+
+    <script>
+        function togglePasswordVisibility(fieldId) {
+            const passwordInput = document.getElementById(fieldId);
+            passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
+        }
+    </script>
+</body>
+</html>
