@@ -6,6 +6,10 @@
     <title>Nuevo Dispositivo - TechCo</title>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/nuevodispositivo.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -120,6 +124,7 @@
           Dispositivos
         </li>
         <li onclick="window.location.href='reporte.html'">Reporte</li>
+        <li onclick="window.location.href='tickets.html'">Tickets</li>
       </ul>
       <button class="new-device">Nuevo Dispositivo</button>
       <button
@@ -132,7 +137,7 @@
     <main class="content">
       <h1>Registrar Nuevo Dispositivo</h1>
 
-      <form class="device-form">
+      <form id="device-form" class="device-form">
         <div class="form-group">
           <label for="nombre">Nombre del dispositivo:</label>
           <input
@@ -149,10 +154,10 @@
             <option value="">Seleccione un tipo</option>
             <option value="laptop">Laptop</option>
             <option value="telefono">Teléfono</option>
-            <option value="ordenador">Ordenador</option>
-            <option value="dispositivo-red">Dispositivo de red</option>
+            <option value="computadora">Ordenador</option>
+            <option value="tablet">Tablet</option>
             <option value="impresora">Impresora</option>
-            <option value="router">Router</option>
+            <option value="route">Router</option>
           </select>
         </div>
         <div class="form-group">
@@ -160,9 +165,7 @@
           <select id="estado" name="estado" required>
             <option value="">Seleccione un estado</option>
             <option value="activo">Activo</option>
-            <option value="mantenimiento">En mantenimiento</option>
-            <option value="dañado">Dañado</option>
-            <option value="retirado">Retirado</option>
+            <option value="inactivo">Inactivo</option>
           </select>
         </div>
         <div class="form-group">
@@ -206,5 +209,7 @@
         </div>
       </form>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="./nuevodispositivo.js"></script>
   </body>
 </html>

@@ -16,6 +16,11 @@ loginForm.addEventListener('submit', async function (event) {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
+    if (!email || !password) {
+        alert('Please fill in all fields.');
+        return;
+    }
+
 
     try {
 
@@ -26,9 +31,7 @@ loginForm.addEventListener('submit', async function (event) {
         window.location.href = 'main.html';
     } catch (error) {
         console.error('Error:', error);
-        alert('An error occurred while processing your request. Please try again later.');
         return;
-
     }
 
 
@@ -44,8 +47,10 @@ const loginSubmit = async (data) => {
             body: JSON.stringify(data)
         });
 
-        if (!response.ok) {
-            throw new Error('Login failed');
+        if (response.status !== 200) {
+            console.log("test", response)
+            alert('Login failed: ', response.statusText);
+            throw new Error('Login failed: ', response.statusText);
         }
 
         const result = await response.json();

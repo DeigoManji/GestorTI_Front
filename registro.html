@@ -13,9 +13,12 @@
 
     <div class="login-container">
       <h2>REGISTRO</h2>
-      <form>
+      <form id="registration-form" action="#" >
         <label for="name">Nombre</label>
         <input type="text" id="name" placeholder="Tu nombre" required />
+
+        <label for="name">Apellido</label>
+        <input type="text" id="last_name" placeholder="Tu apellido" required />
 
         <label for="email">Correo electrónico</label>
         <input
@@ -104,12 +107,8 @@
       </form>
     </div>
 
-    <script>
-      function togglePasswordVisibility(fieldId) {
-        const passwordInput = document.getElementById(fieldId);
-        passwordInput.type =
-          passwordInput.type === "password" ? "text" : "password";
-      }
+    <script src="./registro.js"></script>
+      
     </script>
   </body>
 </html>

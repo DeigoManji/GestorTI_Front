@@ -118,6 +118,7 @@
         <li onclick="window.location.href='main.html'">Panel de Control</li>
         <li class="active">Dispositivos</li>
         <li onclick="window.location.href='reporte.html'">Reporte</li>
+        <li onclick="window.location.href='tickets.html'">Tickets</li>
       </ul>
       <button
         class="new-device"
@@ -150,27 +151,12 @@
             <th>Nombre</th>
             <th>Tipo</th>
             <th>Estado</th>
-            <th>Conectado</th>
-            <th>Último visto</th>
+            <th>Observaciones</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>Laptop de Prueba</td>
-            <td>Laptop</td>
-            <td><span class="status active">Activo</span></td>
-            <td><div class="connected-icon active"></div></td>
-            <td>Hace 10 minutos</td>
-          </tr>
-          <tr>
-            <td>Laptop de Prueba 2</td>
-            <td>Laptop</td>
-            <td><span class="status inactive">Inactivo</span></td>
-            <td><div class="connected-icon inactive"></div></td>
-            <td>Hace 5 días</td>
-          </tr>
-        </tbody>
+        <tbody id="devices-list"></tbody>
       </table>
     </main>
+    <script src="./dispositivos.js"></script>
   </body>
 </html>
