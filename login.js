@@ -26,9 +26,21 @@ loginForm.addEventListener('submit', async function (event) {
 
         await loginSubmit({ email, password })
 
+        Swal.fire({
+            title: "Login succesfully!",
+            icon: "success"
+        });
+
         loginForm.reset();
-        alert('Login successful! Redirecting to dashboard...');
-        window.location.href = 'main.html';
+
+        setTimeout(() => {
+            window.location.href = 'main.html';
+        }, [2000])
+
+
+
+
+
     } catch (error) {
         console.error('Error:', error);
         return;
