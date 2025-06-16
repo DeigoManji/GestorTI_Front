@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Información - TechCo</title>
+    <title>Dispositivos - TechCo</title>
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/info.css" />
+    <link rel="stylesheet" href="css/dispositivos.css" />
   </head>
   <body>
     <header class="header">
@@ -119,9 +119,7 @@
         <li onclick="window.location.href='dispositivos.html'">Dispositivos</li>
         <li onclick="window.location.href='reporte.html'">Reporte</li>
         <li onclick="window.location.href='tickets.html'">Tickets</li>
-        <li onclick="window.location.href='mantenimiento_lista.html'">
-          Mantenimientos
-        </li>
+        <li class="active">Mantenimientos</li>
       </ul>
       <button
         class="new-device"
@@ -137,67 +135,27 @@
       </button>
     </div>
     <main class="content">
-      <div class="info-container">
-        <h1>Información y Manual de Usuario</h1>
-        <section style="margin-bottom: 36px">
-          <h2>Manual de Usuario</h2>
-          <p>
-            Bienvenido al sistema de gestión de dispositivos TechCo. Este manual
-            le guiará en el uso de las principales funciones:
-          </p>
-          <ul>
-            <li>
-              <b>Panel de Control:</b> Visualice el resumen y estado general de
-              los dispositivos.
-            </li>
-            <li>
-              <b>Dispositivos:</b> Consulte, busque y filtre todos los
-              dispositivos registrados.
-            </li>
-            <li>
-              <b>Registrar Nuevo Dispositivo:</b> Añada un nuevo dispositivo al
-              sistema.
-            </li>
-            <li>
-              <b>Registrar Mantenimiento:</b> Registre las actividades de
-              mantenimiento realizadas.
-            </li>
-            <li>
-              <b>Historial:</b> Revise los eventos y cambios realizados en los
-              dispositivos.
-            </li>
-            <li>
-              <b>Reporte:</b> Genere reportes personalizados según filtros de
-              fecha, usuario y dispositivo.
-            </li>
-            <li>
-              <b>Chat:</b> Consulte al asistente IA para soporte y ayuda
-              técnica.
-            </li>
-            <li>
-              <b>Usuario:</b> Gestione su información personal y cambie su
-              contraseña.
-            </li>
-          </ul>
-        </section>
-        <section style="margin-bottom: 36px">
-          <h2>Información del Sistema</h2>
-          <p>
-            Sistema de Gestión de Dispositivos TechCo v1.0<br />
-            Desarrollado para la administración eficiente de inventario,
-            mantenimiento y control de dispositivos tecnológicos en la
-            organización.<br />
-            Compatible con navegadores modernos y dispositivos móviles.
-          </p>
-        </section>
-        <section>
-          <h2>Autores</h2>
-          <ul>
-            <li>Diego Moran</li>
-            <li>Angel Machado</li>
-          </ul>
-        </section>
+      <h1>Mantenimientos</h1>
+      <div class="filters">
+        <button class="filter-btn active">Todos</button>
       </div>
+
+      <div class="dispositivos-searchbar">
+        <input type="text" placeholder="🔍 Buscar Mantenimientos" />
+      </div>
+
+      <table class="devices-table">
+        <thead>
+          <tr>
+            <th>Nombre Del Dispositivo</th>
+            <th>Tipo Del Mantenimiento</th>
+            <th>Descripcion</th>
+            <th>Realizado en</th>
+          </tr>
+        </thead>
+        <tbody id="maintenances-list"></tbody>
+      </table>
     </main>
+    <script src="./mantenimiento_lista.js"></script>
   </body>
 </html>

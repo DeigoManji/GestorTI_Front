@@ -25,11 +25,13 @@ deviceForm.addEventListener('submit', async function (event) {
             icon: "success"
         });
 
-
-
-
         deviceForm.reset();
-        window.location.href = 'dispositivos.html';
+
+        setTimeout(() => {
+            window.location.href = 'dispositivos.html';
+        }, [2000])
+
+
     } catch (error) {
         console.error('Error:', error);
         return;
@@ -48,12 +50,16 @@ const registerDevice = async (data) => {
 
         if (!response.ok) {
             console.error('Device registration failed:', response);
-            alert('Device registration failed: ', response.statusText);
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Device registration failed!",
+            });
             throw new Error('Device registration failed: ', response.statusText);
         }
 
         const result = await response.json();
-        console.log('Device registration successful:', result);
+
         return result;
     } catch (error) {
         console.error('Error during device registration:', error);
