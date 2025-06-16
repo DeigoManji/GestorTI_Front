@@ -39,7 +39,7 @@ const registerTicket = async (data) => {
     try {
 
 
-        const response = await fetch("http://localhost:3000/tickets", {
+        const response = await fetch("https://gestortiback.onrender.com/tickets", {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
