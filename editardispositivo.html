@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dispositivos - TechCo</title>
+    <title>Editar Dispositivo - TechCo</title>
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/dispositivos.css" />
+    <link rel="stylesheet" href="css/nuevodispositivo.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -116,19 +120,16 @@
     <div class="sidebar">
       <ul>
         <li onclick="window.location.href='main.html'">Panel de Control</li>
-        <li class="active">Dispositivos</li>
+        <li class="active" onclick="window.location.href='dispositivos.html'">
+          Dispositivos
+        </li>
         <li onclick="window.location.href='reporte.html'">Reporte</li>
         <li onclick="window.location.href='tickets.html'">Tickets</li>
         <li onclick="window.location.href='mantenimiento_lista.html'">
           Mantenimientos
         </li>
       </ul>
-      <button
-        class="new-device"
-        onclick="window.location.href='nuevodispositivo.html'"
-      >
-        Nuevo Dispositivo
-      </button>
+      <button class="new-device">Nuevo Dispositivo</button>
       <button
         class="register-maintenance"
         onclick="window.location.href='mantenimiento.html'"
@@ -137,30 +138,40 @@
       </button>
     </div>
     <main class="content">
-      <h1>Dispositivos</h1>
-      <div class="filters">
-        <button class="filter-btn active">Todos</button>
-        <button class="filter-btn">Activos</button>
-        <button class="filter-btn">Inactivos</button>
-      </div>
+      <h1 id="title"></h1>
 
-      <div class="dispositivos-searchbar">
-        <input type="text" placeholder="🔍 Buscar dispositivos" />
-      </div>
+      <form id="device-form" class="device-form">
+        <div class="form-group">
+          <label for="estado">Estado:</label>
+          <select id="estado" name="estado" required>
+            <option value="">Seleccione un estado</option>
+            <option value="activo">Activo</option>
+            <option value="inactivo">Inactivo</option>
+          </select>
+        </div>
 
-      <table class="devices-table">
-        <thead>
-          <tr>
-            <th>Nombre</th>
-            <th>Tipo</th>
-            <th>Estado</th>
-            <th>Observaciones</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody id="devices-list"></tbody>
-      </table>
+        <div class="form-group">
+          <label for="observaciones">Observaciones:</label>
+          <textarea
+            id="observaciones"
+            name="observaciones"
+            rows="3"
+            placeholder="Observaciones"
+          ></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="submit-btn">Editar Dispositivo</button>
+          <button
+            type="button"
+            onclick="window.location.href='dispositivos.html'"
+            class="cancel-btn"
+          >
+            Cancelar
+          </button>
+        </div>
+      </form>
     </main>
-    <script src="./dispositivos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="./editardispositivo.js"></script>
   </body>
 </html>

@@ -2,6 +2,12 @@
 
 const deviceList = document.getElementById('devices-list');
 
+const redirectToEdit = (id, status, observations, name) => {
+    window.location.href =
+        `editardispositivo.html?id=${id}&status=${status}&observation=${observations}&name=${name}`;
+}
+
+
 const getAllDevices = async () => {
     try {
         const response = await fetch('https://gestortiback.onrender.com/device');
@@ -19,7 +25,11 @@ const getAllDevices = async () => {
             <td>${device.name}</td>
             <td>${device.type}</td>
             <td><span class="status ${device.status == "activo" ? "active" : "inactive"}">${device.status}</span></td>
-            <td>${device.observations}</td>`;
+            <td>${device.observations}</td>
+            <td>
+                <button onclick= "redirectToEdit('${device.id}','${device.status}','${device.observations}','${device.name}')" class="status active">Editar</button>
+            </td>
+            `;
 
             deviceList.appendChild(bodyCard);
         });

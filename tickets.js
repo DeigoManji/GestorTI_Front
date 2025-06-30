@@ -1,6 +1,13 @@
 const ticketsList = document.getElementById("tickets-list")
 
 
+const redirectToEdit = (id) => {
+    window.location.href =
+        `editarticket.html?id=${id}`;
+}
+
+
+
 const getAllTickets = async () => {
     try {
         const response = await fetch('https://gestortiback.onrender.com/tickets');
@@ -34,6 +41,9 @@ const getAllTickets = async () => {
             <td class="${ticket.status == "abierto" ? "status abierto" : "status cerrado"}">${ticket.status.toUpperCase()}</td>
             <td class="${priorityClass}">${ticket.priority.toUpperCase()}</td>
             <td>${new Date(ticket.created_at).toLocaleDateString()}</td>
+            <td>
+                <button onclick= "redirectToEdit('${ticket.id}')" class="status-button active">Editar</button>
+            </td>
             `;
 
             ticketsList.appendChild(bodyCard);

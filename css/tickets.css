@@ -70,6 +70,18 @@
   border-bottom: 2px solid #29b6f6;
 }
 
+.status-button {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.status-button.active {
+  background: #29b6f6;
+  color: #fff;
+}
+
 .status {
   border-radius: 5px;
   font-weight: bold;

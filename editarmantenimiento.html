@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dispositivos - TechCo</title>
+    <title>Editar Mantenimiento - TechCo</title>
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/dispositivos.css" />
+    <link rel="stylesheet" href="css/mantenimiento.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -116,7 +120,7 @@
     <div class="sidebar">
       <ul>
         <li onclick="window.location.href='main.html'">Panel de Control</li>
-        <li class="active">Dispositivos</li>
+        <li onclick="window.location.href='dispositivos.html'">Dispositivos</li>
         <li onclick="window.location.href='reporte.html'">Reporte</li>
         <li onclick="window.location.href='tickets.html'">Tickets</li>
         <li onclick="window.location.href='mantenimiento_lista.html'">
@@ -137,30 +141,38 @@
       </button>
     </div>
     <main class="content">
-      <h1>Dispositivos</h1>
-      <div class="filters">
-        <button class="filter-btn active">Todos</button>
-        <button class="filter-btn">Activos</button>
-        <button class="filter-btn">Inactivos</button>
-      </div>
-
-      <div class="dispositivos-searchbar">
-        <input type="text" placeholder="🔍 Buscar dispositivos" />
-      </div>
-
-      <table class="devices-table">
-        <thead>
-          <tr>
-            <th>Nombre</th>
-            <th>Tipo</th>
-            <th>Estado</th>
-            <th>Observaciones</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody id="devices-list"></tbody>
-      </table>
+      <h1>Editar Mantenimiento</h1>
+      <form id="maintenance_form" class="maintenance-form">
+        <div class="form-group">
+          <div class="datepicker-container">
+            <label for="fecha">Selecciona la fecha donde fue realizado:</label>
+            <input type="date" id="fecha" name="fecha" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="descripcion">Descripción del trabajo realizado:</label>
+          <textarea
+            id="descripcion"
+            name="descripcion"
+            rows="3"
+            maxlength="99"
+            placeholder="Detalle las tareas realizadas"
+            required
+          ></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="submit-btn">Editar Mantenimiento</button>
+          <button
+            type="button"
+            onclick="window.location.href='main.html'"
+            class="cancel-btn"
+          >
+            Cancelar
+          </button>
+        </div>
+      </form>
     </main>
-    <script src="./dispositivos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="./editarmantenimiento.js"></script>
   </body>
 </html>
