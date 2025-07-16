@@ -37,6 +37,7 @@ const getAllTickets = async () => {
 
             const bodyCard = document.createElement('tr');
             bodyCard.innerHTML = `
+            <td>${ticket.id}</td>
             <td>${ticket.description}</td>
             <td class="${ticket.status == "abierto" ? "status abierto" : "status cerrado"}">${ticket.status.toUpperCase()}</td>
             <td class="${priorityClass}">${ticket.priority.toUpperCase()}</td>

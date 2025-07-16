@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard- TechCo</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -114,12 +118,20 @@
     </header>
     <div class="sidebar">
       <ul>
-        <li class="active">Panel de Control</li>
-        <li onclick="window.location.href='dispositivos.html'">Dispositivos</li>
-        <li onclick="window.location.href='reporte.html'">Reporte</li>
-        <li onclick="window.location.href='tickets.html'">Tickets</li>
+        <li class="active">
+          <i class="bi bi-speedometer2"></i> Panel de Control
+        </li>
+        <li onclick="window.location.href='dispositivos.html'">
+          <i class="bi bi-pc-display-horizontal"></i> Dispositivos
+        </li>
+        <li onclick="window.location.href='reporte.html'">
+          <i class="bi bi-file-earmark-ppt-fill"></i> Reporte
+        </li>
+        <li onclick="window.location.href='tickets.html'">
+          <i class="bi bi-ticket-detailed-fill"></i> Tickets
+        </li>
         <li onclick="window.location.href='mantenimiento_lista.html'">
-          Mantenimientos
+          <i class="bi bi-wrench"></i> Mantenimientos
         </li>
       </ul>
       <button
@@ -136,23 +148,48 @@
       </button>
     </div>
     <main class="content">
-      <div class="dashboard-welcome">
-        <span>BIENVENIDO USUARIO</span>
+      <h2>Estado del Sistema</h2>
+
+      <div class="system-notification">
+        <div class="system-notification-container">
+          <p class="dashboard-titles">Equipos Activos</p>
+          <div>
+            <p id="active-devices"></p>
+            <i class="bi bi-pc-display-horizontal"></i>
+          </div>
+        </div>
+
+        <div class="system-notification-container">
+          <p class="dashboard-titles">Tickets Abierto</p>
+          <div>
+            <p id="opened-tickets"></p>
+            <i class="bi bi-ticket-detailed-fill"></i>
+          </div>
+        </div>
+
+        <div class="system-notification-container">
+          <p class="dashboard-titles">Tickets Cerrados</p>
+          <div>
+            <p id="closed-tickets"></p>
+            <i class="bi bi-ticket-detailed"></i>
+          </div>
+        </div>
+
+        <div class="system-notification-container">
+          <p class="dashboard-titles">Mantenimientos Realizados</p>
+          <div>
+            <p id="total-maintenance"></p>
+            <i class="bi bi-check-all"></i>
+          </div>
+        </div>
       </div>
-      <h2>Estado de dispositivos</h2>
-      <div class="device-health">
-        <div>Dispositivos en buen estado<br /><strong>100</strong></div>
-        <div>Dispositivos con problemas<br /><strong>50</strong></div>
-        <div>Total de dispositivos<br /><strong>150</strong></div>
-      </div>
-      <div class="notifications">
-        <h2>Últimas notificaciones</h2>
-        <ul>
-          <li>Dispositivo perdido - HP EliteBook (hace 2 días)</li>
-          <li>Dispositivo perdido - Macbook Pro (hace 2 días)</li>
-          <li>Dispositivo perdido - Lenovo Thinkpad (hace 2 días)</li>
-        </ul>
-      </div>
+
+      <p class="dashboard-titles">Tickets Recientes:</p>
+      <div
+        id="system-last-tickets-priority"
+        class="system-last-tickets-priority"
+      ></div>
     </main>
+    <script src="./main.js"></script>
   </body>
 </html>

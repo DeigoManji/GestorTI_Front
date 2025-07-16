@@ -1,231 +1,273 @@
 body {
-    display: flex;
-    margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    flex-direction: column;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #232b33 0%, #49525a 100%);
+  display: flex;
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #232b33 0%, #49525a 100%);
 }
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 95vw;
-    height: 56px;
-    background: rgba(30, 36, 44, 0.95);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 32px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 95vw;
+  height: 56px;
+  background: rgba(30, 36, 44, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+  z-index: 1000;
 }
 
 .logo {
-    font-size: 22px;
-    font-weight: bold;
-    color: #fff;
-    letter-spacing: 2px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
 }
 
 .chat-btn,
 .logout-btn,
 .user-btn,
 .info-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 6px 12px;
-    font-size: 20px;
-    height: 48px;
-    width: 48px;
-    justify-content: center;
-    color: #fff;
-    transition: background 0.2s;
-    border-radius: 50%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px 12px;
+  font-size: 20px;
+  height: 48px;
+  width: 48px;
+  justify-content: center;
+  color: #fff;
+  transition: background 0.2s;
+  border-radius: 50%;
 }
-
 
 .chat-btn:hover,
 .logout-btn:hover,
 .user-btn:hover,
 .info-btn:hover {
-    background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .chat-btn svg,
 .user-btn svg,
 .logout-btn svg,
 .info-btn svg {
-    width: 28px;
-    height: 28px;
-    color: #fff;
-    stroke-width: 1.5;
+  width: 28px;
+  height: 28px;
+  color: #fff;
+  stroke-width: 1.5;
 }
 
 .logout-btn svg {
-    color: #e53935;
+  color: #e53935;
 }
 
-
 .sidebar {
-    width: 240px;
-    height: 100vh;
-    background: rgba(30, 36, 44, 0.98);
-    padding-top: 80px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 900;
-    box-shadow: 2px 0 16px rgba(0,0,0,0.12);
-    display: flex;
-    flex-direction: column;
+  width: 240px;
+  height: 100vh;
+  background: rgba(30, 36, 44, 0.98);
+  padding-top: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  box-shadow: 2px 0 16px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar ul {
-    list-style: none;
-    padding: 0 18px;
-    margin: 0;
+  list-style: none;
+  padding: 0 18px;
+  margin: 0;
 }
 
 .sidebar ul li {
-    padding: 16px 28px;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: background 0.2s, color 0.2s;
-    margin-bottom: 12px;
-    color: #cfd8dc;
-    font-size: 17px;
-    font-weight: 500;
+  padding: 16px 28px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background 0.2s, color 0.2s;
+  margin-bottom: 12px;
+  color: #cfd8dc;
+  font-size: 17px;
+  font-weight: 500;
 }
 
 .sidebar ul li:hover,
 .sidebar ul .active {
-    background: linear-gradient(90deg, #232b33 60%, #49525a 100%);
-    color: #fff;
-    font-weight: bold;
+  background: linear-gradient(90deg, #232b33 60%, #49525a 100%);
+  color: #fff;
+  font-weight: bold;
 }
 
 .new-device {
-    margin: 30px 18px 0 18px;
-    padding: 12px;
-    background: linear-gradient(90deg, #29b6f6 60%, #1976d2 100%);
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    text-align: center;
-    width: calc(100% - 36px);
-    font-size: 16px;
-    font-weight: bold;
-    box-shadow: 0 2px 8px rgba(41,182,246,0.10);
-    transition: background 0.2s;
+  margin: 30px 18px 0 18px;
+  padding: 12px;
+  background: linear-gradient(90deg, #29b6f6 60%, #1976d2 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  width: calc(100% - 36px);
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(41, 182, 246, 0.1);
+  transition: background 0.2s;
 }
 
 .new-device:hover {
-    background: linear-gradient(90deg, #1976d2 60%, #29b6f6 100%);
+  background: linear-gradient(90deg, #1976d2 60%, #29b6f6 100%);
 }
 
-
 .register-maintenance {
-    margin: 12px 18px 0 18px;
-    padding: 12px;
-    background: linear-gradient(90deg, #29b6f6 60%, #1976d2 100%);
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    text-align: center;
-    width: calc(100% - 36px); /* igual que .new-device */
-    font-size: 16px;
-    font-weight: bold;
-    box-shadow: 0 2px 8px rgba(41,182,246,0.10);
-    transition: background 0.2s;
+  margin: 12px 18px 0 18px;
+  padding: 12px;
+  background: linear-gradient(90deg, #29b6f6 60%, #1976d2 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  width: calc(100% - 36px); /* igual que .new-device */
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(41, 182, 246, 0.1);
+  transition: background 0.2s;
 }
 
 .register-maintenance:hover {
-    background: linear-gradient(90deg, #1976d2 60%, #29b6f6 100%);
+  background: linear-gradient(90deg, #1976d2 60%, #29b6f6 100%);
 }
 
 .content {
-    margin-left: 260px;
-    padding: 40px 32px;
-    width: calc(95% - 270px);
-    margin-top: 70px;
-    min-height: calc(100vh - 70px);
-    color: #e3e3e3;
+  margin-left: 260px;
+  padding: 40px 32px;
+  width: calc(95% - 270px);
+  margin-top: 70px;
+  min-height: calc(100vh - 70px);
+  color: #e3e3e3;
 }
 
-h1, h2, h3, h4, h5 {
-    color: #fff;
-    font-weight: bold;
-    margin-top: 0;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #fff;
+  font-weight: bold;
+  margin-top: 0;
 }
 
 h2 {
-    font-size: 20px;
-    margin-bottom: 12px;
+  font-size: 20px;
+  margin-bottom: 12px;
 }
 
 .device-health,
 .notifications {
-    background: rgba(36, 41, 49, 0.92);
-    padding: 24px;
-    margin-bottom: 24px;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  background: rgba(36, 41, 49, 0.92);
+  padding: 24px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
 }
 
 .chart {
-    height: 200px;
-    background: rgba(36, 41, 49, 0.92);
-    margin-bottom: 24px;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  height: 200px;
+  background: rgba(36, 41, 49, 0.92);
+  margin-bottom: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
 }
 
-.stats, .device-health {
-    display: flex;
-    justify-content: space-between;
+.stats,
+.device-health {
+  display: flex;
+  justify-content: space-between;
 }
 
 ul {
-    color: #b0bec5;
+  color: #b0bec5;
 }
 
 .dashboard-welcome {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70px;
-    width: 100%;
-    margin-bottom: 84px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  margin-bottom: 84px;
 }
 
-.dashboard-welcome span {
-    font-size: 3rem;
-    color: #29b6f6;
-    font-weight: bold;
+.dashboard-titles {
+  font-size: 1.2rem;
+  color: #29b6f6;
+  font-weight: bold;
+}
+
+.system-notification {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  margin-top: 24px;
+}
+
+.system-notification-container {
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+  background: rgba(36, 41, 49, 0.92);
+  div {
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: 900;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+.system-last-tickets-priority {
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+  background: rgba(36, 41, 49, 0.92);
+}
+
+.ticket-item {
+  display: flex;
+  border-radius: 12px;
+  padding: 16px;
+  border: 2px solid rgba(128, 128, 128, 0.288);
+  flex-direction: column;
+  font-weight: 900;
+  align-items: start;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 900px) {
-    .sidebar {
-        width: 70px;
-        padding-top: 60px;
-    }
-    .sidebar ul li,
-    .new-device {
-        font-size: 0;
-        padding: 12px 0;
-        margin-bottom: 8px;
-    }
-    .content {
-        margin-left: 80px;
-        width: calc(100vw - 80px);
-        padding: 20px 8px;
-    }
+  .sidebar {
+    width: 70px;
+    padding-top: 60px;
+  }
+  .sidebar ul li,
+  .new-device {
+    font-size: 0;
+    padding: 12px 0;
+    margin-bottom: 8px;
+  }
+  .content {
+    margin-left: 80px;
+    width: calc(100vw - 80px);
+    padding: 20px 8px;
+  }
 }
