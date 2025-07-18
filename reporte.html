@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reporte - TechCo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/reporte.css" />
     <link
@@ -150,41 +154,19 @@
     </div>
     <main class="content">
       <h1 class="reporte-title">Generar Reporte</h1>
+
       <div class="reporte-filtros">
-        <form class="reporte-form" onsubmit="return false;">
-          <div class="filtro-grupo">
-            <label for="fecha-inicio">Fecha inicio</label>
-            <input type="date" id="fecha-inicio" name="fecha-inicio" />
-          </div>
-          <div class="filtro-grupo">
-            <label for="fecha-fin">Fecha fin</label>
-            <input type="date" id="fecha-fin" name="fecha-fin" />
-          </div>
-          <div class="filtro-grupo">
-            <label for="usuario">Usuario</label>
-            <input
-              type="text"
-              id="usuario"
-              name="usuario"
-              placeholder="Nombre de usuario"
-            />
-          </div>
-          <div class="filtro-grupo">
-            <label for="dispositivo">Dispositivo</label>
-            <input
-              type="text"
-              id="dispositivo"
-              name="dispositivo"
-              placeholder="Nombre del dispositivo"
-            />
-          </div>
-          <div class="filtro-acciones">
-            <button type="submit" class="btn-generar">Generar Reporte</button>
-            <button type="reset" class="btn-limpiar">Limpiar</button>
+        <form id="reporte-form" class="reporte-form" onsubmit="return false;">
+          <div class="form-group">
+            <label for="reporte-de:">Reporte de:</label>
+            <select id="reports-select" name="Reporte de:" required></select>
+            <button type="submit" class="submit-btn">Generar Reporte</button>
           </div>
         </form>
       </div>
       <!-- Aquí puedes mostrar los resultados del reporte después -->
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="./reporte.js"></script>
   </body>
 </html>

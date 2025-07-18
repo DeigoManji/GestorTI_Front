@@ -17,7 +17,7 @@ const getAllDevices = async () => {
         devices.forEach(device => {
 
             const optionBody = document.createElement('option');
-            optionBody.innerHTML = `${device.name}`;
+            optionBody.innerHTML = `#${device.id} | ${device.name}`;
             optionBody.value = `${device.id},${device.name}`;
             deviceSelect.appendChild(optionBody);
         });

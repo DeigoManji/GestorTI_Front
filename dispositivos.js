@@ -22,9 +22,11 @@ const getAllDevices = async () => {
 
             const bodyCard = document.createElement('tr');
             bodyCard.innerHTML = `
+            <td>${device.id}</td>
             <td>${device.name}</td>
             <td>${device.type}</td>
             <td><span class="status ${device.status == "activo" ? "active" : "inactive"}">${device.status}</span></td>
+            <td>${device.last_maintenance_date ? new Date(device.last_maintenance_date).toISOString().slice(0, 10) : "N/A"}</td>
             <td>${device.observations}</td>
             <td>
                 <button onclick= "redirectToEdit('${device.id}','${device.status}','${device.observations}','${device.name}')" class="status active">Editar</button>

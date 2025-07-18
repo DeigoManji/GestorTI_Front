@@ -23,6 +23,7 @@ const getAllMaintenances = async () => {
 
             const bodyCard = document.createElement('tr');
             bodyCard.innerHTML = `
+            <td>${maintenance.id}</td>
             <td>${maintenance.device_name}</td>
             <td>${maintenance.maintenance_type}</td>
             <td>${maintenance.description}</td>
